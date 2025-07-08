@@ -1,0 +1,30 @@
+.box {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  width: 50%;
+  height: 500px;
+  border: 1px solid #ddd;
+  box-shadow: 0 5px 10px 10px #333333;
+  margin: 90px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-us {
+  color: #ff8c00;
+  font-size: 28px;
+}
+
+.contact-description {
+  padding: 15px 0;
+  color: #ddd;
+  font-size: 18px;
+}
+
+.email {
+  color: white;
+}

@@ -7,12 +7,14 @@ import Footer from "./components/Footer/Footer";
 import CardGrid from "./components/Card/CardGrid";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Layout from "./components/Layout";
+import Contact from "./Contact";
 
 const router = createBrowserRouter([
   {path:'/', element: <Layout />, children: [
     {path: '/', element: <App />},
     {path: '/products/:category', element: <CardGrid />},
     {path: '/detail/:id', element: <Detail />},
+    {path: '/contact', element: <Contact />},
   ]}
 ])
 
