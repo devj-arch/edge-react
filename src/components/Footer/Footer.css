@@ -1,0 +1,35 @@
+footer {
+  display: grid;
+  background-color: #222;
+  font-family: 'Poppins', sans-serif;
+  padding: 50px;
+  justify-items: center;
+  color: aliceblue;
+  grid-template-columns: repeat(4, auto);
+}
+
+.footer-title {
+  justify-self: center;
+}
+
+.footer-section {
+  ul {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    line-height: 1.5;
+  }
+
+  li{
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #AEB2B4;
+  }
+
+  a:hover {
+    color: white;
+  }
+}

@@ -1,0 +1,40 @@
+.card-link {
+  display: block; /* Ensure Link behaves like a block element */
+  text-decoration: none; /* Remove default underline */
+  color: inherit; /* Inherit text color */
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.lower {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+img:hover {
+
+}
+
+a {
+  text-decoration: none !important;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+}

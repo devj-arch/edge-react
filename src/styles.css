@@ -1,0 +1,35 @@
+body {
+  background: linear-gradient(100deg, #2c2c2c, #444);
+}
+
+.nav {
+  display: flex;
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #333;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  li {
+    display: inline;
+    color: white;
+    padding: 14px 16px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+  }
+
+  li a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+
+  }
+  li a:hover {
+    background-color: #111;
+  }
+}
