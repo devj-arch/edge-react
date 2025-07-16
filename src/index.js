@@ -8,6 +8,8 @@ import CardGrid from "./components/Card/CardGrid";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Layout from "./components/Layout";
 import Contact from "./Contact";
+import Checkout from "./components/Checkout/Checkout";
+import Login from "./components/Login/Login";
 
 const router = createBrowserRouter([
   {path:'/', element: <Layout />, children: [
@@ -15,6 +17,8 @@ const router = createBrowserRouter([
     {path: '/products/:category', element: <CardGrid />},
     {path: '/detail/:id', element: <Detail />},
     {path: '/contact', element: <Contact />},
+    {path: '/checkout', element: <Checkout />},
+    {path: '/login', element: <Login />},
   ]}
 ])
 
