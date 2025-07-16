@@ -6,12 +6,16 @@ import useFetch from '../../hooks/useFetch';
 import CONFIG from '../../config';
 import { useParams } from 'react-router-dom';
 import ProductCarousel from '../Carousel/ProductCarousel';
+import LoadingScreen from '../LoadingScreen/LoadingScreen';
+import ErrorScreen from '../ErrorScreen/ErrorScreen';
 
 const CardGrid = () => {
   const {category} = useParams();
 
   const {data = [], loading, error} = useFetch(CONFIG.BACKEND_URL + '/products?category=' + category);
   console.log('data: ', data);
+  if(loading) return (<LoadingScreen />);
+  if(error) return (<ErrorScreen />);
   return ( <>
     <ProductCarousel />
     <div className="card-grid">
