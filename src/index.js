@@ -18,11 +18,11 @@ const router = createBrowserRouter([
   {path:'/', element: <Layout />, children: [
     {path: '/', element: <App />},
     {path: '/products/:category', element: <CardGrid />},
-    {path: '/detail/:id', element: <Detail />},
+    { path: '/detail/:category/:id', element: <Detail /> },
     {path: '/contact', element: <Contact />},
     {path: '/checkout', element: <Checkout />},
     {path: '/login', element: <Login />},
-{path: '/signup', element: <Signup />},
+    {path: '/signup', element: <Signup />},
   ]}
 ])
 
@@ -30,8 +30,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-  {/* <App /> */}
-  <RouterProvider router={router} />
-  {/* <Detail index='2' /> */}
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 )

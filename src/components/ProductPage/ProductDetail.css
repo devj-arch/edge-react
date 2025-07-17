@@ -45,8 +45,6 @@ h2 {
   }
 }
 
-
-
 .size {
   display: grid;
   margin: 40px;
@@ -58,6 +56,13 @@ h2 {
 #s, #m, #l, #xl, #xxl {
   border-radius: 10px;
   padding: 5px;
+  background-color: lightgray;
+  border: 0.5px solid lightgray;
+}
+
+#s:hover, #m:hover, #l:hover, #xl:hover, #xxl:hover {
+  background-color: white;
+  border: 0.5px solid white;
 }
 
 .save {
@@ -71,12 +76,14 @@ h2 {
  border-radius: 5px;
  padding: 10px;
  background-color: aqua;
+ border: 0.5px solid aqua;
 }
 
 #add-to-cart {
   border-radius: 5px;
   padding: 10px;
   background-color: gold;
+  border: 0.5px solid gold;
 }
 
 .more-detail {

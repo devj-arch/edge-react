@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Card.css';
 
-const Card = ({ id, image, description, price, bookmark }) => {
+const Card = ({ id, category, image, description, price, bookmark }) => {
   return (
-    <Link to={'/detail/'+id} className='card-link card'>
+    <Link to={`/detail/${category}/${id}`} className='card-link card'>
     {/* <div className="card"> */}
       {image && <img src={image} alt="clothing" className="card-image" />}
       <p className="card-description">{description}</p>

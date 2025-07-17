@@ -5,16 +5,26 @@ import Navbar from "../Navbar/Navbar";
 import "./ProductDetail.css";
 import CONFIG from '../../config';
 import useFetch from "../../hooks/useFetch";
+import { useGetProductsByCategoryQuery } from "../app/api";
+import LoadingScreen from "../LoadingScreen/LoadingScreen";
+import ErrorScreen from "../ErrorScreen/ErrorScreen";
 
 
 function Detail() {
-  const {data = [], loading, error} = useFetch(CONFIG.BACKEND_URL + '/products?category=M');
+  // const {category} = useParams();
+  const {id, category} = useParams();
 
-  const {id} = useParams();
+  const { data: products = [], isLoading, error } = useGetProductsByCategoryQuery(category);
 
-  const filterData = data?.find(product => product._id === id) || {};
+  const filterData = products?.find(product => product._id === id) || {};
 
-  const { image1, name, description, price} = filterData;
+  const { image1, name, description, price } = filterData;
+
+  if(isLoading) return (<LoadingScreen />);
+  if(error) return (<ErrorScreen />);
+
+  // const {data = [], loading, error} = useFetch(CONFIG.BACKEND_URL + '/products?category=M');
+
 
 
   return (
