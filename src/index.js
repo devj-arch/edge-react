@@ -10,6 +10,9 @@ import Layout from "./components/Layout";
 import Contact from "./Contact";
 import Checkout from "./components/Checkout/Checkout";
 import Login from "./components/Login/Login";
+import Signup from "./components/Signup/Signup";
+import { Provider } from "react-redux";
+import { store } from "./components/app/store";
 
 const router = createBrowserRouter([
   {path:'/', element: <Layout />, children: [
@@ -19,6 +22,7 @@ const router = createBrowserRouter([
     {path: '/contact', element: <Contact />},
     {path: '/checkout', element: <Checkout />},
     {path: '/login', element: <Login />},
+{path: '/signup', element: <Signup />},
   ]}
 ])
 
