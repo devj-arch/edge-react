@@ -1,19 +1,26 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useGetUserProfileQuery } from "../app/api";
+import { useGetUserProfileQuery, useLogoutMutation } from "../app/api";
+import CONFIG from "../../config";
 
 function Navbar() {
   const navigate = useNavigate();
-  const { data: user, isLoading, isError } = useGetUserProfileQuery();
+  const [logout] = useLogoutMutation();
+  const {
+    data: user,
+    isLoading,
+    isError,
+  } = useGetUserProfileQuery();
 
   const handleLogout = async () => {
-    await fetch(`${import.meta.env.VITE_BACKEND_URL}/auth/logout`, {
-      method: "POST",
-      credentials: "include",
-    });
-    // Refresh to update state (or use invalidation logic)
-    window.location.reload();
-  };
+  try {
+    const response = await logout().unwrap();
+    console.log("Logout response:", response); // Should log { msg: "Logged out successfully" }
+    navigate("/login");
+  } catch (error) {
+    console.error("Logout error:", error); // Log any errors
+  }
+};
 
   return (
     <nav>
@@ -25,13 +32,11 @@ function Navbar() {
           <li><Link to="/products/W">Women</Link></li>
           <li><Link to="/products/K">Kids</Link></li>
           <li><Link to="/contact">Contact</Link></li>
-          <li><Link to="/saved">Saved</Link></li>
+          <li><Link to="/wishlist">Wishlist</Link></li>
         </div>
-
         <div className="search">
           <input type="search" placeholder="Search for products..." />
         </div>
-
         <div className="right-side">
           {isLoading ? (
             <li>Loading...</li>
@@ -39,9 +44,16 @@ function Navbar() {
             <li><Link to="/login">Login</Link></li>
           ) : (
             <>
-              <li><Link to="/checkout">Cart</Link></li>
               <li>Hello, {user.name}</li>
-              <li><button onClick={handleLogout}>Logout</button></li>
+              <li><Link to="/checkout">Cart</Link></li>
+              <li>
+                <Link
+                  // to="/login" // Optional: Set the link destination
+                  onClick={handleLogout}
+                >
+                  Logout
+                </Link>
+              </li>
             </>
           )}
         </div>

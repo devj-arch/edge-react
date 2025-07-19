@@ -18,7 +18,18 @@ export const api = createApi({
         body: { email, password },
       }),
     }),
+    logout: builder.mutation({
+      query: () => ({
+        url: '/auth/logout',
+        method: 'POST',
+        headers: { "Content-Type": "application/json" },
+        credentials: 'include',
+      }),
+    }),
+    getUserProfile: builder.query({
+      query: () => '/auth/profile',
+    }),
   }),
 });
 
-export const { useGetProductsByCategoryQuery, useLoginMutation } = api;
+export const { useGetProductsByCategoryQuery, useLoginMutation, useLogoutMutation, useGetUserProfileQuery, } = api;
