@@ -1,0 +1,28 @@
+.wishlist-content {
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: 'Poppins', sans-serif;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    color: white;
+  }
+  p {
+    color: #7D7D7D;
+  }
+  img {
+    height: 75px;
+    padding: 20px;
+    filter: invert(97%);
+  }
+  button {
+    background-color: white;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 0.5px solid white;
+  }
+}
+

@@ -13,16 +13,18 @@ import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import { Provider } from "react-redux";
 import { store } from "./components/app/store";
+import Wishlist from "./Wishlist/Wishlist";
 
 const router = createBrowserRouter([
   {path:'/', element: <Layout />, children: [
     {path: '/', element: <App />},
     {path: '/products/:category', element: <CardGrid />},
-    { path: '/detail/:category/:id', element: <Detail /> },
+    {path: '/detail/:category/:id', element: <Detail />},
     {path: '/contact', element: <Contact />},
     {path: '/checkout', element: <Checkout />},
     {path: '/login', element: <Login />},
     {path: '/signup', element: <Signup />},
+    {path: '/wishlist', element: <Wishlist />},
   ]}
 ])
 

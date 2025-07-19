@@ -32,4 +32,10 @@ body {
   li a:hover {
     background-color: #111;
   }
+
+  .search {
+    input{
+      color: white;
+    }
+  }
 }

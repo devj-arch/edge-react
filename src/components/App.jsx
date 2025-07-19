@@ -6,7 +6,6 @@ import "./App.css";
 
 function App() {
   return (
-    <>
     <div className='hero'>
       <div className='hero-left'>
         <h2>Experience the Timeless Elegance</h2>
@@ -23,9 +22,7 @@ function App() {
         <img src='https://sem2-project-muz1.onrender.com/models/female_image.png' alt='women-hero'></img>
       </div>
     </div>
-    
 
-    </>
   )
 
 }
