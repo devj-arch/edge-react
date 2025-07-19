@@ -14,6 +14,7 @@ import Signup from "./components/Signup/Signup";
 import { Provider } from "react-redux";
 import { store } from "./components/app/store";
 import Wishlist from "./Wishlist/Wishlist";
+import OrderConfirmation from "./components/Checkout/OrderConfirmation";
 
 const router = createBrowserRouter([
   {path:'/', element: <Layout />, children: [
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
     {path: '/login', element: <Login />},
     {path: '/signup', element: <Signup />},
     {path: '/wishlist', element: <Wishlist />},
+    {path: '/order-confirmation', element: <OrderConfirmation />},
   ]}
 ])
 

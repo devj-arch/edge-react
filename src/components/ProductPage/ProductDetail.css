@@ -84,6 +84,7 @@ h2 {
   padding: 10px;
   background-color: gold;
   border: 0.5px solid gold;
+  cursor: pointer;
 }
 
 .more-detail {

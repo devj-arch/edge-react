@@ -1,0 +1,17 @@
+.order-confirm-box {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.order-confirm {
+  color: #ff8c00;
+  font-size: 28px;
+}
+
+.return {
+  color: lightgray;
+}
+
+.return:hover {
+  color: white;
+}

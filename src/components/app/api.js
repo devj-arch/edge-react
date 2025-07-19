@@ -29,7 +29,28 @@ export const api = createApi({
     getUserProfile: builder.query({
       query: () => '/auth/profile',
     }),
+    getCart: builder.query({
+      query: () => ({
+        url: '/cart',
+        method: 'POST', // Matches your backend's POST /cart
+      }),
+    }),
+    placeOrder: builder.mutation({
+      query: (billingDetails) => ({
+        url: '/cart/place-order',
+        method: 'POST',
+        body: { billingDetails },
+      }),
+    }),
   }),
 });
 
-export const { useGetProductsByCategoryQuery, useLoginMutation, useLogoutMutation, useGetUserProfileQuery, } = api;
+export const {
+  useGetProductsByCategoryQuery,
+  useLoginMutation,
+  useLogoutMutation,
+  useGetUserProfileQuery,
+  useGetCartQuery,
+  usePlaceOrderMutation,
+} = api;
+

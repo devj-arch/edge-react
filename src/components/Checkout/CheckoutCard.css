@@ -1,0 +1,17 @@
+.cart-item {
+  display: 'flex';
+  justify-content: 'space-between';
+  padding: '10px';
+  border-bottom: '1px solid #dddd';
+}
+
+.basic-details {
+
+  width: 50%;
+
+}
+
+.price-quantity-subTotal {
+  display: flex;
+  flex-flow: column;
+}

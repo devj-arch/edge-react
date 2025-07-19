@@ -26,5 +26,13 @@
 }
 
 .email {
+  color: aqua;
+}
+
+.email a {
+  color: lightgray;
+}
+
+.email a:hover {
   color: white;
 }

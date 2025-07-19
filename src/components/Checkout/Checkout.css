@@ -28,10 +28,10 @@ input {
 
 .checkout-confirm {
   display: flex;
-  flex-wrap: wrap;
   margin: 50px;
   color: white;
   font-family: 'Poppins', sans-serif;
+  gap: 30px;
 }
 
 .billing-details {
@@ -112,4 +112,17 @@ input {
   font-weight: 550;
   border: 0.5px solid white;
   background-color: white;
+}
+
+.cart-box {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .checkout-confirm {
+    flex-direction: column;
+  }
 }

@@ -11,7 +11,6 @@ import ErrorScreen from "../ErrorScreen/ErrorScreen";
 
 
 function Detail() {
-  // const {category} = useParams();
   const {id, category} = useParams();
 
   const { data: products = [], isLoading, error } = useGetProductsByCategoryQuery(category);
@@ -22,10 +21,6 @@ function Detail() {
 
   if(isLoading) return (<LoadingScreen />);
   if(error) return (<ErrorScreen />);
-
-  // const {data = [], loading, error} = useFetch(CONFIG.BACKEND_URL + '/products?category=M');
-
-
 
   return (
     <div className="detail-page">
