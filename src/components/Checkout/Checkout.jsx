@@ -208,7 +208,7 @@ function Checkout() {
           <h2>Your Cart</h2>
           <div className='cart-box'>
           <CheckoutGrid cart={cart} />
-          <h3>Total: ₹{cartTotal.toFixed(2)}</h3>
+          <h3 className='total'>Total: ₹{cartTotal.toFixed(2)}</h3>
           </div>
         </div>
       </div>

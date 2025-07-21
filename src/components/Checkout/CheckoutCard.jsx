@@ -1,5 +1,6 @@
 // CheckoutCard.jsx
 import React from 'react';
+import "./CheckoutCard.css";
 
 function CheckoutCard({ item }) {
   const { productId, quantity } = item;
@@ -13,7 +14,7 @@ function CheckoutCard({ item }) {
 
   return (
     <div className="cart-item">
-      <div className='basic-details'>
+      <div className='basic-details-right'>
         <h3>{productId.name}</h3>
         <p>{shortenDescription(productId.description)}</p>
       </div>

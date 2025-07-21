@@ -65,14 +65,14 @@ h2 {
   border: 0.5px solid white;
 }
 
-.save {
+.add-to-wishlist {
   display: grid;
   grid-template-columns: repeat(2, 100px);
   justify-content: flex-end;
   gap: 20px;
 }
 
-#save {
+#add-to-wishlist {
  border-radius: 5px;
  padding: 10px;
  background-color: aqua;

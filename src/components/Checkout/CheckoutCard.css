@@ -1,15 +1,17 @@
 .cart-item {
-  display: 'flex';
-  justify-content: 'space-between';
-  padding: '10px';
-  border-bottom: '1px solid #dddd';
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid white;
 }
 
-.basic-details {
-
-  width: 50%;
-
+.basic-details-right {
+  width: 75%;
+  p {
+    text-align: justify;
+  }
 }
+
 
 .price-quantity-subTotal {
   display: flex;

@@ -2,6 +2,10 @@ body {
   background: linear-gradient(100deg, #2c2c2c, #444);
 }
 
+button {
+  cursor: pointer;
+}
+
 .nav {
   display: flex;
   list-style-type: none;

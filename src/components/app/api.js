@@ -35,6 +35,14 @@ export const api = createApi({
         method: "POST", // Matches your backend's POST /cart
       }),
     }),
+    addToCart: builder.mutation({
+      query: ({ productId, quantity = 1 }) => ({
+        url: "/cart/add",
+        method: "POST",
+        body: { productId, quantity },
+      }),
+    }),
+
     placeOrder: builder.mutation({
       query: (billingDetails) => ({
         url: "/cart/place-order",
@@ -71,6 +79,7 @@ export const {
   useLogoutMutation,
   useGetUserProfileQuery,
   useGetCartQuery,
+  useAddToCartMutation,
   usePlaceOrderMutation,
   useGetWishlistQuery,
   useAddToWishlistMutation,
