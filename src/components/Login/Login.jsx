@@ -9,7 +9,7 @@ function Login() {
   const [login, { isLoading }] = useLoginMutation();
   const navigate = useNavigate();
 
-const handleLogin = async () => {
+  const handleLogin = async () => {
     try {
       const data = await login({ email, password }).unwrap();
       console.log('data: ', data);

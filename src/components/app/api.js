@@ -18,6 +18,13 @@ export const api = createApi({
         body: { email, password },
       }),
     }),
+    signup: builder.mutation({
+      query: ({ name, email, password }) => ({
+        url: "/auth/signup",
+        method: "POST",
+        body: { name, email, password },
+      }),
+    }),
     logout: builder.mutation({
       query: () => ({
         url: "/auth/logout",
@@ -42,7 +49,6 @@ export const api = createApi({
         body: { productId, quantity },
       }),
     }),
-
     placeOrder: builder.mutation({
       query: (billingDetails) => ({
         url: "/cart/place-order",
@@ -76,6 +82,7 @@ export const api = createApi({
 export const {
   useGetProductsByCategoryQuery,
   useLoginMutation,
+  useSignupMutation,
   useLogoutMutation,
   useGetUserProfileQuery,
   useGetCartQuery,
