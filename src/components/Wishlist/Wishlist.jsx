@@ -18,6 +18,7 @@ function Wishlist() {
     data: wishlistData,
     isLoading: wishlistLoading,
     error: wishlistError,
+    refetch: refetchWishlist,
   } = useGetWishlistQuery(undefined, {
     skip: !isLoggedIn,
   });
@@ -57,7 +58,7 @@ function Wishlist() {
   return (
     <div className="wishlist-page">
       <h2>Your Wishlist</h2>
-      <WishlistGrid wishlist={wishlist} />
+      <WishlistGrid wishlist={wishlist} refetchWishlist={refetchWishlist} />
     </div>
   );
 }

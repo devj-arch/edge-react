@@ -8,12 +8,14 @@ import { useParams } from 'react-router-dom';
 import ProductCarousel from '../Carousel/ProductCarousel';
 import LoadingScreen from '../LoadingScreen/LoadingScreen';
 import ErrorScreen from '../ErrorScreen/ErrorScreen';
-import { useGetProductsByCategoryQuery } from '../app/api';
+import { useGetProductsByCategoryQuery, useGetUserProfileQuery } from '../app/api';
 
 const CardGrid = () => {
   const {category} = useParams();
 
   const {data: products, isLoading, error} = useGetProductsByCategoryQuery(category);
+  const {data} = useGetUserProfileQuery();
+
 
   // const {data = [], loading, error} = useFetch(CONFIG.BACKEND_URL + '/products?category=' + category);
 
@@ -22,7 +24,10 @@ const CardGrid = () => {
   return ( <>
     <ProductCarousel />
     <div className="card-grid">
-      {products?.map((product, index) => (
+      {products?.map((product, index) => {
+        const isBookmarked = data.wishlist.find((item) => (item.productId === product._id));
+
+        return (
         <Card
           key={product._id}
           index = {index}
@@ -31,9 +36,9 @@ const CardGrid = () => {
           image={product.image1}
           price = {product.price}
           category = {product.category}
-          // bookmark = {product.favourite}
+          isBookmarked = {isBookmarked}
         />
-      ))}
+      )})}
     </div>
       </>
   );
