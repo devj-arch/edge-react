@@ -10,7 +10,7 @@ function WishlistCard({ item }) {
     try {
       await removeFromWishlist(item.productId._id || item.productId).unwrap();
       // Optionally: trigger a refetch or update UI optimistically
-      window.location.reload();
+      window.location.reload(); //Had to hard refresh (temp fix)
     } catch (err) {
       console.error("Failed to remove from wishlist:", err);
     }
