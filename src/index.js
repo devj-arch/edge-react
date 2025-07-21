@@ -7,13 +7,13 @@ import Footer from "./components/Footer/Footer";
 import CardGrid from "./components/Card/CardGrid";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Layout from "./components/Layout";
-import Contact from "./Contact";
+import Contact from "./components/Contact/Contact";
 import Checkout from "./components/Checkout/Checkout";
 import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import { Provider } from "react-redux";
 import { store } from "./components/app/store";
-import Wishlist from "./Wishlist/Wishlist";
+import Wishlist from "./components/Wishlist/Wishlist";
 import OrderConfirmation from "./components/Checkout/OrderConfirmation";
 
 const router = createBrowserRouter([

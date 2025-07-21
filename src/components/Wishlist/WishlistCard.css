@@ -1,0 +1,60 @@
+.wishlist-item {
+  justify-self: center;
+  display: flex;
+  justify-content: space-between;
+  background-color: #222222;
+  opacity: 0.9;
+  font-family: 'Poppins', sans-serif;
+  align-items: center;
+  padding: 0 25px;
+  border-radius: 10px;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    opacity 0.3s ease;
+  transform: translateY(0);
+}
+
+.wishlist-item:hover {
+  opacity: 1;
+  transform: translateY(-4px); /* Lift the card */
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.3),   /* elevation shadow */
+
+}
+
+
+
+.wishlist-image {
+  img {
+    border-radius: 10px;
+    margin: 10px 0;
+    height: 200px;
+  }
+}
+
+.wishlist-details {
+  display: flex;
+  flex-flow: column;
+}
+
+.wishlist-add-remove {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+  .add-to-cart, .remove {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+  .add-to-cart {
+    background-color: gold;
+    border: 1px solid gold;
+  }
+  .remove {
+    color: black;
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+  }
+}

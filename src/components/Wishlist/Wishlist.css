@@ -26,3 +26,10 @@
   }
 }
 
+.wishlist-page {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  h2 {
+    text-align: center;
+  }
+}

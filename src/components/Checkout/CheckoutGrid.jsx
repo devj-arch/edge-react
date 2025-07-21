@@ -1,10 +1,11 @@
 // CheckoutGrid.jsx
 import React from 'react';
 import CheckoutCard from './CheckoutCard';
+import "./CheckoutGrid.css";
 
 function CheckoutGrid({ cart }) {
   return (
-    <div className="checkout-grid" style={{ margin: '20px 0' }}>
+    <div className="checkout-grid" >
       {cart.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (

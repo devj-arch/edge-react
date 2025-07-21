@@ -44,7 +44,7 @@ function Navbar() {
             <li><Link to="/login">Login</Link></li>
           ) : (
             <>
-              <li>Hello, {user.name}</li>
+              <li>Hello, {user?.name}</li>
               <li><Link to="/checkout">Cart</Link></li>
               <li>
                 <Link

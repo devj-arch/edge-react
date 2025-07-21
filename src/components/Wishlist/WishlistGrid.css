@@ -1,0 +1,8 @@
+.wishlist-grid {
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+  justify-self: center;
+  width: 75%;
+  margin: 25px 0;
+}
