@@ -10,17 +10,22 @@ function Navbar() {
     data: user,
     isLoading,
     isError,
+    refetch: refetchUserProfile,
   } = useGetUserProfileQuery();
 
   const handleLogout = async () => {
-  try {
-    const response = await logout().unwrap();
-    console.log("Logout response:", response); // Should log { msg: "Logged out successfully" }
-    navigate("/login");
-  } catch (error) {
-    console.error("Logout error:", error); // Log any errors
-  }
-};
+    try {
+      const response = await logout().unwrap();
+      console.log("Logout response:", response);
+
+      await refetchUserProfile(); // <-- force refetch after logout
+
+      navigate("/login");
+    } catch (error) {
+      console.error("Logout error:", error);
+    }
+  };
+
 
   return (
     <nav>
