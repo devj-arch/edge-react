@@ -25,7 +25,7 @@ const CardGrid = () => {
     <ProductCarousel />
     <div className="card-grid">
       {products?.map((product, index) => {
-        const isBookmarked = data.wishlist.find((item) => (item.productId === product._id));
+        const isBookmarked = data?.wishlist?.find((item) => (item.productId === product._id));
 
         return (
         <Card
